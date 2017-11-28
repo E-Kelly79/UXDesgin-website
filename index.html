@@ -21,8 +21,8 @@
 	
 
 <!-- Modal -->
-<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-  <div class="modal-dialog" role="document">
+<div class="modal fade" id="disclaimerModal" tabindex="-1" role="dialog" aria-labelledby="disclaimerModal" aria-hidden="true">
+  <div class="modal-dialog modal-lg" role="document">
     <div class="modal-content">
       <div class="modal-header">
         <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
@@ -35,7 +35,6 @@
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-        <button type="button" class="btn btn-primary">Save changes</button>
       </div>
     </div>
   </div>
@@ -56,15 +55,16 @@
 					<li class="nav-item"> <a class="nav-link" href="references.html">References</a> </li>
 				</ul>
 				<form class="form-inline my-2 my-lg-0">
-					<button type="button" class="btn btn-primary mr-3 my-sm-0" data-toggle="modal" data-target="#loginModal">Log in</button>
+					<button type="button" class="btn btn-primary mr-3 my-sm-0" id="main-login" data-toggle="modal" data-target="#loginModal">Log in</button>
 					<button type="button" class="btn btn-outline-primary my-2 my-sm-0" data-toggle="modal" data-target="#registerModal">Sign Up</button>
+					<p class="logged-in pl-3 pt-3" style="color: white;"></p>
 				</form>
 			</div>
 		</nav>
 		<div class="cover d-flex justify-content-start">
 			<div class="cover-text align-self-center">
 				<img src="img/logo1.png" alt="The logo">
-				<h2 class="text-uppercase">The best of waterford</h2> <a href="#why-us" role="button" class="btn btn-danger btn-lg">Lets Get Started</a> </div>
+				<h2 class="text-uppercase">The best of waterford</h2></div>
 		</div>
 	</header>
 	<section class="info">
@@ -105,7 +105,7 @@
 	============================================-->
 		
 <div class="modal fade" id="loginModal" tabindex="-1" role="dialog" aria-labelledby="loginModal" aria-hidden="true">
-  <div class="modal-dialog" role="document">
+  <div class="modal-dialog modal-lg" role="document">
     <div class="modal-content">
       <div class="modal-header">
         <h3 class="modal-title" id="exampleModalLabel">Log in</h3>
@@ -114,6 +114,7 @@
         </button>
       </div>
       <div class="modal-body">
+       <div class="alert alert-danger"></div>
         <form>
   <div class="form-group">
     <label for="login-email">Email address</label>
@@ -121,9 +122,9 @@
   </div>
   <div class="form-group">
     <label for="login-password">Password</label>
-    <input type="password" class="form-control" id="login password" placeholder="Password">
+    <input type="password" class="form-control" id="login-password" placeholder="Password">
   </div>
-  <button type="submit" class="btn btn-success">Login</button>
+  <button type="button" id="login-button" class="btn btn-success">Login</button>
 </form>
       </div>
       <div class="modal-footer">
@@ -135,10 +136,10 @@
 
 
 <div class="modal fade" id="registerModal" tabindex="-1" role="dialog" aria-labelledby="registerModal" aria-hidden="true">
-  <div class="modal-dialog" role="document">
+  <div class="modal-dialog modal-lg" role="document">
     <div class="modal-content">
       <div class="modal-header">
-        <h3 class="modal-title" id="exampleModalLabel">Log in</h3>
+        <h3 class="modal-title" id="exampleModalLabel">Register</h3>
         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
           <span aria-hidden="true">&times;</span>
         </button>
@@ -157,7 +158,7 @@
     <label for="reg-password">Password</label>
     <input type="password" class="form-control" id="reg-password" placeholder="Password">
   </div>
-  <button type="submit" class="btn btn-success">Register</button>
+  <button type="submit" id="register" class="btn btn-success">Register</button>
 </form>
       </div>
       <div class="modal-footer">
@@ -171,9 +172,16 @@
 	<!-- Bootstrap core JavaScript
     ================================================== -->
 	<!-- Placed at the end of the document so the pages load faster -->
-	<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+	<script src="js/jquery.min.js"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script>
+	<script src="js/main.js"></script>
+	<script>
+		$(document).ready(function(){
+			$('#disclaimerModal').modal();
+			
+		});
+	</script>
 </body>
 
 </html>
