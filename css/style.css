@@ -23,10 +23,10 @@ body {
     .cover1 .cover-text h2 {
       text-transform: uppercase; }
     .cover1 .cover-text img {
-      width: 100%; }
+      width: 100%; } 
 
 .img-circle {
-  border-radius: 50%; }
+  border-radius: 20%; }
 
 .styled {
   border: 5px solid #000;
@@ -49,6 +49,8 @@ body {
       text-transform: uppercase; }
     .cover .cover-text img {
       width: 100%; }
+
+
 
 section {
   background-color: #fff;
